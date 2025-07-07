@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Chill Chill Bot 2.0",
-  "version": "2.0",
+  "version": "2.1",
   "description": "Plays Wolvesville automatically.",
   "permissions": ["debugger", "tabs", "scripting"],
   "host_permissions": ["https://www.wolvesville.com/*"],
