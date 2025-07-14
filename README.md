@@ -55,7 +55,7 @@ Download https://github.com/linlapkien/Chill-Chill-Bot
   -> Turn on "Development Mode"
   -> Click "Load Unpacked" button
   -> put the file that download above.
-  -> Open the game https://www.wolvesville.com/ and enjoy !!
+  -> Open the game "https://www.wolvesville.com/" and enjoy !!
 ```
     
 ## What will be fix in this version?
