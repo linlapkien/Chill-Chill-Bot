@@ -3,7 +3,7 @@
 
 Auto Play for game https://www.wolvesville.com/
 
-Current Version: 2.2
+Current Version: 2.4
 #
 
 
@@ -25,16 +25,19 @@ Current Version: 2.2
   - As alive player, vote according to everyone.
   - As alive player, if no player was voted, detect in chat "me, m, wc" then vote that player.
   - As wolf, chat "me'.
+  - As Fool, Anarchist, Serial Killer, Evil Detective, Arsonist, Chat in Days "I'm ${Role}", For ex: "I'm Fool".
   - As non-wolf role, detect lover is wolf or not, if yes, vote their lover.
   - As Gunner, Click on bullet image, then shoot voted player.
   - As Priest, Click on water image, then throw to voted player. 
   - As Priest, detect lover is wolf or not, if yes, throw random player.
-  - As mayor, Click mayor hat, then vote according to everyone.
+  - As Mayor, Click mayor hat, then vote according to everyone.
+  - As Ritualist, Select random alive player in night phase.
+  - As Baker, Randomly give bread to alive players.
 
    
 # 
 
-## Bst mode
+## Bst mode - Not fix auto play, only auto replay game
 
 - Auto Replay game.
 - Auto Play in Day phase 
