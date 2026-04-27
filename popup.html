@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chill Chill Bot</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup-container">
+      <header class="popup-header">
+        <div>
+          <div class="title">Chill Chill Bot</div>
+        </div>
+      </header>
+
+      <section class="layout-shell">
+        <section class="form-section">
+          <label class="field">
+            <span>Username</span>
+            <input id="username" type="text" maxlength="24" placeholder="" />
+          </label>
+
+          <label class="field">
+            <span>Token</span>
+            <input id="secretToken" type="password" maxlength="64" placeholder="" />
+          </label>
+
+          <div class="field-grid">
+            <div class="field expires-display" id="expiresField">
+              <span>Expires</span>
+              <div class="expires-value" id="expiresText">Not available yet</div>
+              <input id="expires" type="hidden" />
+            </div>
+
+            <label class="field">
+              <span>Mode</span>
+              <select id="gameMode">
+                <option value="b">BST</option>
+                <option value="c">Custom</option>
+              </select>
+            </label>
+          </div>
+
+          <section class="license-row">
+            <span class="license-dot" id="licenseDot"></span>
+            <span id="licenseText">Not Verified</span>
+            <span id="licenseTime" class="license-time"></span>
+            <button type="button" id="verifyButton" class="verify-button">
+              <span class="verify-button__text">Verify</span>
+              <span class="verify-button__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path
+                    d="M9.2 16.6 5.3 12.7l-1.4 1.4 5.3 5.3L20.1 8.5l-1.4-1.4z"
+                  ></path>
+                </svg>
+              </span>
+            </button>
+          </section>
+
+          <p class="hint" id="hintText">Nhập Username và Token Trước khi ấn Run.</p>
+        </section>
+
+        <section class="status-panel">
+          <section class="play-pause-section">
+            <div class="bot-emblem">
+              <button id="runButton" class="run-button" disabled>
+                <span id="runButtonLabel">Run</span>
+              </button>
+            </div>
+          </section>
+
+          <div class="timer" id="timer">00 : 00 : 00</div>
+
+          <div class="bot-status">
+            <span class="bot-status-dot" id="botStatusDot"></span>
+            <span id="botStatusText">Disabled</span>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

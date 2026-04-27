@@ -1,0 +1,310 @@
+:root {
+  --panel: rgba(18, 18, 18, 0.66);
+  --panel-soft: rgba(255, 255, 255, 0.06);
+  --gold: #efd8a3;
+  --gold-strong: #f0d48b;
+  --text-dark: #050505;
+  --field-bg: rgba(255, 255, 255, 0.72);
+  --field-border: rgba(0, 0, 0, 0.86);
+  --good: #2ecc71;
+  --bad: #ff6b6b;
+  --idle: rgba(225, 225, 225, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 760px;
+  min-width: 760px;
+  height: 551px;
+  min-height: 551px;
+  overflow: hidden;
+  font-family: Georgia, "Times New Roman", serif;
+  background: url("./Background.png") center center / 760px 551px no-repeat;
+}
+
+body {
+  padding: 14px;
+}
+
+.popup-container {
+  width: 732px;
+  height: 523px;
+  padding: 18px 24px 20px;
+  border-radius: 38px;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.52), rgba(14, 14, 14, 0.7));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(3px);
+}
+
+.popup-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.title {
+  color: var(--text-dark);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.layout-shell {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 18px;
+  align-items: stretch;
+  margin-top: 6px;
+}
+
+.form-section,
+.status-panel {
+  background: transparent;
+}
+
+.form-section {
+  padding: 0 8px 0 10px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.field span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--gold);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.field input,
+.field select {
+  width: 230px;
+  height: 46px;
+  padding: 8px 16px;
+  border: 1.5px solid var(--field-border);
+  border-radius: 999px;
+  background: var(--field-bg);
+  color: #1e1a15;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.field select {
+  width: 104px;
+  border-radius: 4px;
+  background: rgba(46, 41, 34, 0.88);
+  color: #fff7ea;
+}
+
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 120px;
+  gap: 12px;
+  align-items: end;
+  margin-top: 8px;
+}
+
+.expires-display {
+  margin-bottom: 0;
+}
+
+.expires-value {
+  display: flex;
+  align-items: center;
+  min-height: 24px;
+  color: var(--gold-strong);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.license-row {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  gap: 8px;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.license-dot,
+.bot-status-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--idle);
+}
+
+.license-dot.valid,
+.bot-status-dot.running {
+  background: var(--good);
+}
+
+.license-dot.invalid {
+  background: var(--bad);
+}
+
+#licenseText,
+#botStatusText {
+  color: #f2eee6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.98rem;
+}
+
+.license-time {
+  color: var(--gold-strong);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.92rem;
+  min-height: 1.1em;
+}
+
+.verify-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-width: 132px;
+  height: 40px;
+  padding: 0 0 0 18px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f4d487, #e9b14f);
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 8px 16px rgba(160, 101, 21, 0.18);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+}
+
+.verify-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.42),
+    0 10px 18px rgba(160, 101, 21, 0.24);
+}
+
+.verify-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.verify-button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.verify-button__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f8e5b3, #f1c86d);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.46),
+    0 3px 8px rgba(0, 0, 0, 0.14);
+  flex: 0 0 auto;
+}
+
+.verify-button__icon svg {
+  width: 18px;
+  height: 18px;
+  fill: #2e2414;
+}
+
+.verify-button:disabled {
+  cursor: wait;
+  opacity: 0.85;
+  filter: saturate(0.78);
+}
+
+.status-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 8px;
+}
+
+.play-pause-section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.bot-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  height: 172px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 226, 146, 0.18), transparent 62%),
+    radial-gradient(circle, rgba(239, 216, 163, 0.18), rgba(239, 216, 163, 0) 64%);
+}
+
+.run-button {
+  width: 118px;
+  height: 118px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f5db9f, #eac96f);
+  color: #0d0d0d;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.16),
+    inset 0 2px 10px rgba(255, 255, 255, 0.35);
+}
+
+.run-button.is-running {
+  background: linear-gradient(180deg, #f2d071, #e6b94e);
+}
+
+.run-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.88;
+}
+
+.timer {
+  margin-top: 14px;
+  color: var(--gold);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.bot-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.hint {
+  margin: 14px 0 0;
+  color: rgba(255, 243, 218, 0.84);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.84rem;
+  line-height: 1.4;
+}

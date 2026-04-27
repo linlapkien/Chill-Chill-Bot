@@ -1,10 +1,25 @@
 {
   "manifest_version": 3,
-  "name": "Chill Chill Bot",
-  "version": "2.4",
+  "name": "Chill Chill Bot v2",
+  "version": "2.5",
   "description": "Plays Wolvesville automatically.",
-  "permissions": ["debugger", "tabs", "scripting"],
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["debugger", "tabs", "scripting", "storage"],
   "host_permissions": ["https://www.wolvesville.com/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Chill Chill Bot",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
   "content_scripts": [
     {
       "matches": ["https://www.wolvesville.com/*"],
