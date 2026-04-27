@@ -3,7 +3,7 @@
 
 Auto Play for game https://www.wolvesville.com/
 
-Current Version: 2.4
+Current Version: 2.5
 #
 
 
@@ -48,6 +48,7 @@ Current Version: 2.4
 
 
 #
+
 ## Installation
 
 Download https://github.com/linlapkien/Chill-Chill-Bot 
@@ -61,17 +62,14 @@ Download https://github.com/linlapkien/Chill-Chill-Bot
   -> Open the game "https://www.wolvesville.com/" and enjoy !!
 ```
     
-## What will be fix in this version?
+## What will be fix in this version 2.5?
 
-#### 1. As Host, fix "The Host Left" problem.
+#### 1. Thêm UI Dashboard, để nhập Username và Token.
 
+#### 2. Có thể Chạy Bot hoặc Ngưng Bot trên Dashboard
 
-#### 2. As Priest, fix "Random water to other players"
-
-#### 3. As a Host in the lobby, fix the bug of having to click start game for the first time
 
 #
-
 
 ## Feedback
 
@@ -82,3 +80,37 @@ If you have any feedback, please reach out to Lin (LinXauTinh).
 
 For support, leave message to Lin.
 
+
+
+
+## Trouble shooting - 1 số lỗi có thể gặp khi cài bot.
+Dưới đây là tổng hợp các lỗi phổ biến và cách xử lý nhanh khi cài đặt và vận hành Bot.
+
+### 1. Bot báo "Running" nhưng không hoạt động
+Nguyên nhân: Thường do sai lệch ngôn ngữ hiển thị trong trò chơi khiến Bot không nhận diện
+được các phần tử.
+```bash
+> **Cách fix**: Kiểm tra và chuyển ngôn ngữ trong game sang **Tiếng Anh (English)**.
+```
+
+![Giao diện app](images/screenshot.png)
+
+### 2. Giao diện thu nhỏ nhưng làm Bot không thể click nút.
+Nguyên nhân: Tỷ lệ hiển thị (Zoom) của trình duyệt không tương thích với tọa độ click của Bot.
+```bash
+> **Cách fix**: Tối ưu nhất là để size **50% - 67%** trong trình duyệt.
+Dùng phím tắt **Ctrl - hoặc Ctrl +** để zoom out/in đúng kích thước.
+```
+
+![Giao diện app](images/screenshot.png)
+
+### 3. Bot chỉ Chat được, không tự động Click được
+Nguyên nhân: Content Script của Bot có thể đã bị trình duyệt đưa vào danh sách bỏ qua
+(Ignore List).
+```bash
+> **Cách fix**: Thực hiện theo quy trình Debug sau:
+1. Nhấn **F12 (Inspect)**.
+2. Chuyển sang tab **Application**.
+3. Chọn **Content Script**.
+4. Nhấn chọn ""Remove from ignore list"".
+```
