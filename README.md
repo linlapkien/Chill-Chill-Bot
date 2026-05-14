@@ -93,7 +93,7 @@ Nguyên nhân: Thường do sai lệch ngôn ngữ hiển thị trong trò chơi
 > **Cách fix**: Kiểm tra và chuyển ngôn ngữ trong game sang **Tiếng Anh (English)**.
 ```
 
-![Giao diện app](images/screenshot.png)
+![Giao diện chỉnh ngôn ngữ tiếng anh](images/image1.png)
 
 ### 2. Giao diện thu nhỏ nhưng làm Bot không thể click nút.
 Nguyên nhân: Tỷ lệ hiển thị (Zoom) của trình duyệt không tương thích với tọa độ click của Bot.
@@ -102,7 +102,7 @@ Nguyên nhân: Tỷ lệ hiển thị (Zoom) của trình duyệt không tương
 Dùng phím tắt **Ctrl - hoặc Ctrl +** để zoom out/in đúng kích thước.
 ```
 
-![Giao diện app](images/screenshot.png)
+![Giao diện zoom 67%](images/image2.png)
 
 ### 3. Bot chỉ Chat được, không tự động Click được
 Nguyên nhân: Content Script của Bot có thể đã bị trình duyệt đưa vào danh sách bỏ qua
@@ -114,3 +114,7 @@ Nguyên nhân: Content Script của Bot có thể đã bị trình duyệt đưa
 3. Chọn **Content Script**.
 4. Nhấn chọn ""Remove from ignore list"".
 ```
+
+![Trang 1](images/image3.png)
+
+![Trang 2](images/image4.png)
