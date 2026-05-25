@@ -3,7 +3,7 @@
 
 Auto Play for game https://www.wolvesville.com/
 
-Current Version: 2.5
+Current Version: 2.5.2
 #
 
 
