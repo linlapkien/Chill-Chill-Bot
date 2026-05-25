@@ -110,7 +110,7 @@ Nguyên nhân: Content Script của Bot có thể đã bị trình duyệt đưa
 ```bash
 > **Cách fix**: Thực hiện theo quy trình Debug sau:
 1. Nhấn **F12 (Inspect)**.
-2. Chuyển sang tab **Application**.
+2. Chuyển sang tab **Sources**.
 3. Chọn **Content Script**.
 4. Nhấn chọn ""Remove from ignore list"".
 ```
