@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Testnet Chill Chill Bot",
+  "name": "Chill Chill Bot",
   "version": "2.5.3",
   "description": "Plays Wolvesville automatically.",
   "icons": {
