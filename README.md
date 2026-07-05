@@ -3,7 +3,7 @@
 
 Auto Play for game https://www.wolvesville.com/
 
-Current Version: 2.5.2
+Current Version: 2.6
 #
 
 
@@ -16,10 +16,10 @@ Current Version: 2.5.2
 - Auto Replay game.
 - Host lobby - click Start Game when 8 people.
 - Auto Play in Night phase 
-  - 
+  -
   - As wolf, chat lover number, and vote their lover.
-  - As Junior Werewolf, detect number of other wolf, then tagged the number, and chat: "Ok, Tagged number", "Go number".
-  - As wolf, detect in chat "Go number", then vote the Junior lover.
+  - As Junior Werewolf, detect number of other wolf, then tagged the number, and chat: "Who? my couple is ${number}".
+  - As wolf, detect Junior Werewolf in game, then vote the Junior lover.
 - Auto Play in Day phase 
   - 
   - As alive player, vote according to everyone.
@@ -45,7 +45,12 @@ Current Version: 2.5.2
   - As alive player, vote according to everyone.
 
    
+# 
 
+## Fool mode - Private room
+
+- Auto Replay game.
+- Auto Play as fool lobby
 
 #
 
